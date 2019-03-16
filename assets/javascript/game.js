@@ -10,6 +10,12 @@ var winner = true;
 
 //Start button runs function to pick a name and start the game
 function startGame() {
+      //reset guessed letter array
+      lettersGuessed = [];
+      $("#guessed-letters").html(lettersGuessed);
+      //reset guesses
+      guesses = 6;
+      $("#guessesLeft").html(guesses);
     //generates a random number based of the length of the heroChoices array. 
     // Uses that number to select the hero within the array
     randomHero = Math.floor((Math.random() * heroChoices.length));
@@ -71,6 +77,7 @@ document.onkeyup = function (event) {
         losses++;
         $("#losses").html(losses);
         $("#winOrLose").html(currentHero + " lost! Thanos has destroyed half of all life.")
+        startGame();
     } else {
         winCheck();
     }
@@ -92,6 +99,7 @@ function winCheck() {
         $("#winOrLose").html(currentHero + " has defeated Thanos!");
         wins++;
         $("#wins").html(wins);
+        startGame();
     }
     winner = true;
 };
@@ -101,12 +109,8 @@ function winCheck() {
 
 $(document).ready(function () {
     $("#startButton").click(function () {
-        //reset guessed letter array
-        lettersGuessed = [];
-        $("#guessed-letters").html(lettersGuessed);
-        //reset guesses
-        guesses = 6;
-        $("#guessesLeft").html(guesses);
         startGame();
+      
+        document.getElementById("startButton").style.display = "none";
     });
 });
