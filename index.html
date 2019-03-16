@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marvel Hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <script src="assets/javascript/game.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col l12" id="headlinePicture">
+
+                <img id="bannerpic" src="assets/images/marvelHeroes.jpg" alt="bannerpic">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col l12">
+                <div id="instructions">
+                    <h5>Press The Start Button and Press a letter to start guessing the Marvel Hero Fighting Thanos!</h5>
+                    <a id="startButton" class="waves-effect waves-yellow red accent-4 btn-large">Start Game</a>
+                    <div>
+                            <!-- wins/losses -->
+                            <h5 class="winDiv">Wins:<span id="wins"></span></h5>
+                            <h5 class="loseDiv">Losses <span id="losses"></span></h5>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col l6">
+                <div id="hangmanGame">
+
+                    <!-- guessing section -->
+                    <div id="currentHeroDiv">
+                        <h5 class="section-title">Current Hero</h5>
+                        <div id="currentHero"></div>
+                    </div>
+
+                    <div id="guessesleftDiv">
+                        <h5 class="section-title">Number of Guesses Left</h5>
+                        <div id="guessesLeft"></div>
+                    </div>
+
+                    <div id="guessed-letters-section">
+                        <h5 class="section-title">Letters Already Guessed</h5>
+                        <div id="guessed-letters"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col l5 push-l1">
+                <div id="thanosStatus"><img src="assets/images/thanosallstones.jpg" id="thanosStatusPic" alt="hangman">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col l12">
+            <h4 id="winOrLose"></h4>
+            </div>  
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

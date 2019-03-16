@@ -1,0 +1,63 @@
+/* font-family: 'Bangers', cursive; */
+
+
+* {
+    background-color: black;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    color: red;
+}
+
+
+#container {
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+#bannerpic{
+    width: 100%;
+    height: 200px;
+}
+
+#instructions{
+    color: red;
+    text-align: center;
+}
+
+#thanosStatus{
+    float: right;
+}
+
+#thanosStatusPic{
+    width:100%;
+    
+
+}
+
+#winOrLose{
+        text-transform: capitalize;
+        font-size: 40px;
+        width: 100%;
+        text-align: center;
+}
+
+#wins, #losses {
+    color: red;
+    font-size: 40px;
+}
+#currentHero {
+    color: red;
+    font-size: 40px;
+}
+
+#guessesLeft {
+    color: red;
+    font-size: 40px;
+}
+
+#guessed-letters{
+    color: red;
+    font-size: 40px;
+}
+
